@@ -1,0 +1,8 @@
+<h1>Home Page</h1>
+<ul>
+    <li *ngFor="let pictures of pics">
+<a
+        [routerLink]="['/pictures', pictures.user]"
+    >{{ pictures.user}}</a>
+    </li>
+</ul>
