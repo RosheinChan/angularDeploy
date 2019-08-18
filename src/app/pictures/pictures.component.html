@@ -1,4 +1,22 @@
-<h1>Pictures for {{user}}</h1>
+
+    
+    <body>
+        <h1>Pictures for {{user}}</h1>
+
+        <ul>
+            <li *ngFor="let pictures of pics">
+        <a
+                [routerLink]="['/pictures', pictures.user]"
+            >{{ pictures.user}}</a>
+            </li>
+        </ul>
+        <div>
+            
+        </div>
+        
+    </body>
+
 
 <button (click)="viewAll()">View All</button>
+
 

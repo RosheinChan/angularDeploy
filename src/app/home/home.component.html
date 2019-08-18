@@ -1,8 +1,32 @@
-<h1>Home Page</h1>
-<ul>
-    <li *ngFor="let pictures of pics">
-<a
-        [routerLink]="['/pictures', pictures.user]"
-    >{{ pictures.user}}</a>
-    </li>
-</ul>
+<html> 
+    <head>
+        
+        <title></title>
+        
+    </head>
+    <body>
+        <div class="header">
+            <a href="#default" class="logo">Home Page</a>
+            <div class="header-right">
+                <a href="#contact">Login</a>
+                <a href="#about">Sign Up</a>
+            </div>
+        </div>
+        <!-- <ul>
+            <li *ngFor="let pictures of pics">
+        <a
+                [routerLink]="['/pictures', pictures.user]"
+            >{{ pictures.user}}</a>
+            </li>
+        </ul> -->
+        
+        <div id="index-gallery" *ngFor="let pictures of pics">
+            <div class="item">
+              <img src="https://pbs.twimg.com/media/DldsWe7U4AAepGA.jpg" alt=""/>
+              <p>User Profile: <a [routerLink]="['/pictures', pictures.user]">{{ pictures.user}}</a></p>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
